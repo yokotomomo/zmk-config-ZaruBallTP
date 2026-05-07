@@ -14,3 +14,11 @@
 &left_encoder {
     status = "okay";
 };
+
+/ {
+    trackball_listener: trackball_listener {
+    compatible = "zmk,input-listener";
+    status = "status = "disabled";
+    device = <&trackball>;
+    };
+};
