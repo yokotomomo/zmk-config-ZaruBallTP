@@ -179,5 +179,6 @@
         compatible = "cirque,pinnacle";
         reg = <0x2a>;
         status = "okay";
+        data-ready-gpios = <&gpio0 16 (GPIO_ACTIVE_HIGH)>;
     };
 };
