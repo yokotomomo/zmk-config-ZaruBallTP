@@ -12,12 +12,11 @@ manifest:
       revision: main
       import: app/west.yml
     
-    # トラックパッド(Cirque)用のドライバモジュール
+    # ↓ この3行を完全に削除してください！
     - name: cirque-input-module
       remote: petejohanson
       revision: main
       
-    # RGB LED用のウィジェット（最新版）
     - name: zmk-rgbled-widget
       remote: caksoylar
       revision: main
