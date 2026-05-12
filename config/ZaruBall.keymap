@@ -5,26 +5,20 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
-#include <input/processors.dtsi>
-#include <dt-bindings/zmk/input_transform.h>
-
 #define BASE 0
 
-// スクロール量の設定
 #undef ZMK_POINTING_DEFAULT_SCRL_VAL
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
 
 / {
     behaviors {
-        // スクロール用のbehaviorの設定
         scroll_down_up: behavior_sensor_rotate_mouse_wheel_down_up {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-            tap-ms = <20>; // スクロールのタップ時間
+            tap-ms = <20>;
         };
 
-        // レイヤーが削除されたため、単体キーとして動作するように修正
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -39,9 +33,7 @@
             bindings = <&mt RCTL LANG1>;
         };
     };
-};
 
-/ { 
     keymap {
         compatible = "zmk,keymap";
 
