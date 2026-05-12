@@ -19,6 +19,3 @@
 &trackpad {
     status = "disabled";
 };
-&trackpad_listener {
-    status = "disabled";
-};
