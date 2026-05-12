@@ -18,9 +18,9 @@
 #
 
 include:
-  - board: seeeduino_xiao_ble
+  - board: xiao_ble  # ← ここを seeeduino_xiao_ble から書き換え
     shield: ZaruBall_left rgbled_adapter
-  - board: seeeduino_xiao_ble
+  - board: xiao_ble  # ← ここも書き換え
     shield: ZaruBall_right rgbled_adapter
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
