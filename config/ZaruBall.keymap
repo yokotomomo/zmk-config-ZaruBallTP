@@ -19,7 +19,7 @@
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
 
 // トラックボールの設定(AML, SCROLL)
-&trackball_listener {
+&trackpad_listener {
     input-processors =  <
                         // トラックボールの向きの変更(ZaruBallv1とv2,v3ではセンサーの向きが異なるので調整してください。デフォルトではv2,v3用)
                          &zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT | INPUT_TRANSFORM_X_INVERT)
