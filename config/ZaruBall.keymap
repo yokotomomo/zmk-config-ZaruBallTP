@@ -15,6 +15,7 @@
 #define SCROLL 4
 
 // スクロール量の設定
+#undef ZMK_POINTING_DEFAULT_SCRL_VAL
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
 
 
