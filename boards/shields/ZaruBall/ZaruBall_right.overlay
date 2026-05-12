@@ -19,7 +19,6 @@
 };
 
 
-// ZaruBall.dtsiで定義したtrackpad_listenerを有効化
 / {
   trackpad_listener {
     status = "okay";
