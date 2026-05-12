@@ -2,25 +2,22 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: badjeff
-      url-base: https://github.com/badjeff
-    - name: caksoylar
-      url-base: https://github.com/caksoylar
+    - name: petejohanson
+      url-base: https://github.com/petejohanson
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: v0.3
-      import: app/west.yml
-      # --- ここを追加 ---
-    - name: zmk-studio
-      remote: zmkfirmware
       revision: main
-    # ----------------
-    - name: zmk-pmw3610-driver
-      remote: badjeff
-      revision: zmk-0.3
+      import: app/west.yml
+      
+    # ↓ここを変更！ zmk-pmw3610-driver を消して、Cirqueのモジュールに書き換えます
+    - name: cirque-input-module
+      remote: petejohanson
+      revision: main
+      
+    # ↓RGBLEDウィジェットはそのまま残します
     - name: zmk-rgbled-widget
-      remote: caksoylar
-      revision: v0.3-branch
+      remote: petejohanson
+      revision: main
   self:
     path: config
