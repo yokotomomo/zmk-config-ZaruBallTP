@@ -19,12 +19,12 @@
 };
 
 
-// ZaruBall.dtsiで定義したtrackball_listenerを有効化
+// ZaruBall.dtsiで定義したtrackpad_listenerを有効化
 / {
-  trackball_listener {
+  trackpad_listener {
     status = "okay";
     compatible = "zmk,input-listener";
-    device = <&trackball>;
+    device = <&trackpad>;
   };
 };
 
