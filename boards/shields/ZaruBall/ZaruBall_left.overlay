@@ -15,11 +15,10 @@
     status = "okay";
 };
 
-// 左手側ではトラックボール関連の機能をすべて無効化する
-&trackball {
+// 左手側ではトラックパッド関連の機能をすべて無効化する
+&trackpad {
     status = "disabled";
 };
-
-&trackball_listener {
+&trackpad_listener {
     status = "disabled";
 };
