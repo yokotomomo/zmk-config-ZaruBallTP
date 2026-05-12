@@ -12,8 +12,7 @@
 #define LOWER 1
 #define RAISE 2
 #define ADJUST 3
-#define MOUSE 4
-#define SCROLL 5
+#define SCROLL 4
 
 // スクロール量の設定
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
@@ -41,11 +40,11 @@
         };
 
         td0: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&mt LALT LANG2>, <&mo RAISE>, <&mo MOUSE>;
-        };
+    compatible = "zmk,behavior-tap-dance";
+    #binding-cells = <0>;
+    tapping-term-ms = <200>;
+    bindings = <&mt LALT LANG2>, <&mo RAISE>;
+};
 
         td1: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
@@ -79,8 +78,7 @@
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>,
-                <&macro_tap>,
-                <&sl MOUSE>;
+                <&macro_tap>;
 
             label = "MKP_EXIT_AML";
         };
