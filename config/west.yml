@@ -2,6 +2,8 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: caksoylar
+      url-base: https://github.com/caksoylar
     - name: petejohanson
       url-base: https://github.com/petejohanson
   projects:
@@ -9,15 +11,15 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-      
-    # ↓ここを変更！ zmk-pmw3610-driver を消して、Cirqueのモジュールに書き換えます
+    
+    # トラックパッド(Cirque)用のドライバモジュール
     - name: cirque-input-module
       remote: petejohanson
       revision: main
       
-    # ↓RGBLEDウィジェットはそのまま残します
+    # RGB LED用のウィジェット（最新版）
     - name: zmk-rgbled-widget
-      remote: petejohanson
+      remote: caksoylar
       revision: main
   self:
     path: config
